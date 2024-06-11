@@ -3,6 +3,7 @@
     width: 100%;
     background-color: var(--color-yellow);
     padding: 10px 25px;
+    z-index: 999;
 }
 
 .navbar-content{
