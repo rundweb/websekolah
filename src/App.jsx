@@ -10,6 +10,7 @@ function App() {
     <div>
       <NavbarComponents />
       <Routes>
+        <Route exact path="/websekolah" Component={HomePages}></Route>
         <Route path="/" Component={HomePages}></Route>
         <Route path="/berita" Component={BeritaPages}></Route>
         <Route path="/galeri" Component={GaleryPages}></Route>
