@@ -26,7 +26,7 @@ export const menu = [
   },
   {
     id: 6,
-    name: "Galley",
+    name: "Gallery",
     path: "/galeri",
   },
   {

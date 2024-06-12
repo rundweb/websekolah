@@ -1,68 +1,111 @@
-.navbar{
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-yellow);
+  padding: 10px 25px;
+  z-index: 999;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+.navimg-logo {
+  width: 100px;
+}
+
+.navbar-logo h1 {
+  color: var(--color-navy);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-link a {
+  color: var(--color-navy);
+  font-size: 16px;
+  font-weight: 500;
+  transition: all ease 0.3s;
+  position: relative;
+}
+
+.nav-link a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--color-white);
+  bottom: -1px;
+  transition: all ease 0.3s;
+}
+
+.nav-link a:hover::before {
+  width: 100%;
+}
+
+.nav-link a:hover {
+  color: var(--color-white);
+}
+
+.btn-menu {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.btn-menu i {
+  font-size: 40px;
+  color: var(--color-navy);
+}
+
+@media (max-width: 780px) {
+  .nav-list {
     position: fixed;
+    z-index: -1;
+    min-height: 100vh;
+    /* From https://css.glass */
+    background: rgba(255, 214, 10, 0.58);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 214, 10, 0.3);
+    top: 0;
+    right: -100%;
     width: 100%;
-    background-color: var(--color-yellow);
-    padding: 10px 25px;
-    z-index: 999;
-}
+    flex-direction: column;
+    padding: 110px 30px;
+    align-items: flex-start;
+    transition: all ease-in 0.5s;
+  }
 
-.navbar-content{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+  .open {
+    right: 0;
+  }
 
-.navbar-logo{
-    display: flex;
-    align-items: center;
-    /* gap: 10px; */
-}
-
-.navimg-logo{
-    width: 100px;
-}
-
-.navbar-logo h1{
-    color: var(--color-navy);
+  .nav-link a {
     font-size: 26px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
+  }
 
-.nav-list{
+  .btn-menu {
     display: flex;
-    align-items: center;
-    gap: 16px;
+  }
 }
-
-.nav-link a{
-    color: var(--color-navy);
-    font-size: 16px;
-    font-weight: 500;
-    transition: all ease .3s;
-    position: relative;
-}
-
-.nav-link a::before{
-    content: '';
-    position: absolute;
-    width: 0;
-    left: 0;
-    height: 2px;
-    background-color: var(--color-white);
-    bottom: -1px;
-    transition: all ease .3s;
-
-}
-
-.nav-link a:hover::before{
-    width: 100%;
-}
-
-.nav-link a:hover{
-    color: var(--color-white);
-}
-
