@@ -109,3 +109,14 @@
     display: flex;
   }
 }
+
+
+@media (max-width:560px) {
+  .navimg-logo{
+    width: 80px;
+  }
+
+  .navbar-logo h1{
+    font-size: 18px;
+  }
+}
